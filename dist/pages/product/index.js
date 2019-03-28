@@ -32,7 +32,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Index = (_dec = (0, _index3.inject)('locationStore'), _dec(_class = (0, _index3.observer)(_class = (_temp2 = _class2 = function (_BaseComponent) {
+var Index = (_dec = (0, _index3.inject)('counterStore', 'locationStore'), _dec(_class = (0, _index3.observer)(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(Index, _BaseComponent);
 
   function Index() {
@@ -47,8 +47,8 @@ var Index = (_dec = (0, _index3.inject)('locationStore'), _dec(_class = (0, _ind
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "province", "city", "area", "title", "desc", "files", "value", "locationStore"], _this.config = {
-      navigationBarTitleText: '首页'
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["province", "city", "area", "title", "desc", "files", "value", "locationStore"], _this.config = {
+      navigationBarTitleText: '发布'
     }, _this.onChangeTitle = function (title) {
       _this.setState({ title: title });
     }, _this.onChange = function (files) {
@@ -78,11 +78,12 @@ var Index = (_dec = (0, _index3.inject)('locationStore'), _dec(_class = (0, _ind
               case 4:
                 actFiles = _context.sent;
 
+                console.log(actFiles);
                 (0, _fetch2.default)('product/saveOrUpdate', {
                   title: title,
                   desc: desc,
                   images: actFiles,
-                  location: latitude + "," + longitude,
+                  location: longitude + "," + latitude,
                   province: province,
                   city: city,
                   area: area
@@ -90,7 +91,7 @@ var Index = (_dec = (0, _index3.inject)('locationStore'), _dec(_class = (0, _ind
                   _index2.default.showToast({ title: '发布成功' });
                 });
 
-              case 6:
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -127,9 +128,7 @@ var Index = (_dec = (0, _index3.inject)('locationStore'), _dec(_class = (0, _ind
           city = _props$locationStore.city,
           area = _props$locationStore.area;
 
-      var anonymousState__temp = this.__state.files.length < 9;
       Object.assign(this.__state, {
-        anonymousState__temp: anonymousState__temp,
         province: province,
         city: city,
         area: area

@@ -24,7 +24,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Index = (_dec = (0, _index3.inject)('counterStore'), _dec(_class = (0, _index3.observer)(_class = (_temp2 = _class2 = function (_BaseComponent) {
+var Index = (_dec = (0, _index3.inject)(), _dec(_class = (0, _index3.observer)(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(Index, _BaseComponent);
 
   function Index() {
@@ -38,20 +38,8 @@ var Index = (_dec = (0, _index3.inject)('counterStore'), _dec(_class = (0, _inde
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["counterStore"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.config = {
       navigationBarTitleText: '用户中心'
-    }, _this.increment = function () {
-      var counterStore = _this.props.counterStore;
-
-      counterStore.increment();
-    }, _this.decrement = function () {
-      var counterStore = _this.props.counterStore;
-
-      counterStore.decrement();
-    }, _this.incrementAsync = function () {
-      var counterStore = _this.props.counterStore;
-
-      counterStore.incrementAsync();
     }, _this.$$refs = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -87,21 +75,13 @@ var Index = (_dec = (0, _index3.inject)('counterStore'), _dec(_class = (0, _inde
       this.__props = arguments[1] || this.props || {};
       var __runloopRef = arguments[2];
       ;
-
-      var counter = this.__props.counterStore.counter;
-
       Object.assign(this.__state, {});
       return this.__state;
     }
   }]);
 
   return Index;
-}(_index.Component), _class2.properties = {
-  "counterStore": {
-    "type": null,
-    "value": null
-  }
-}, _class2.$$events = [], _temp2)) || _class) || _class);
+}(_index.Component), _class2.properties = {}, _class2.$$events = [], _temp2)) || _class) || _class);
 exports.default = Index;
 
 Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Index, true));

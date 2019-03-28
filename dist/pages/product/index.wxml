@@ -1,10 +1,10 @@
 <block>
     <view>
-        <at-form bindonsubmit="onPublish" __triggerObserer="{{ _triggerObserer }}" __fn_onSubmit="{{true}}">
-            <at-input type="text" __triggerObserer="{{ _triggerObserer }}" name="title" bindonchange="onChangeTitle" value="{{title}}" placeholder="标题 想换点啥" __fn_onChange="{{true}}"></at-input>
-            <at-textarea value="{{value}}" __triggerObserer="{{ _triggerObserer }}" bindonchange="handleChange" maxLength="{{200}}" placeholder="您想换点啥" __fn_onChange="{{true}}" data-e-onchange-so="this"></at-textarea>
-            <at-image-picker length="{{3}}" __triggerObserer="{{ _triggerObserer }}" showAddBtn="{{anonymousState__temp}}" multiple="{{true}}" files="{{files}}" bindonchange="onChange" bindonfail="onFail" bindonimageclick="onImageClick" __fn_onChange="{{true}}" data-e-onchange-so="this" __fn_onFail="{{true}}" data-e-onfail-so="this" __fn_onImageClick="{{true}}" data-e-onimageclick-so="this"></at-image-picker>
-            <view>{{'位置：' + province + '-' + city + '-' + area}}</view>
+        <at-form className="App" __triggerObserer="{{ _triggerObserer }}" bindonsubmit="onPublish" __fn_onSubmit="{{true}}">
+            <at-input type="text" __triggerObserer="{{ _triggerObserer }}" name="title" bindonchange="onChangeTitle" value="{{title}}" placeholder="标题 品类品牌型号都是对方喜欢搜索的" __fn_onChange="{{true}}"></at-input>
+            <at-textarea value="{{value}}" __triggerObserer="{{ _triggerObserer }}" bindonchange="handleChange" maxLength="{{200}}" placeholder="描述宝贝的转手原因、入手渠道和使用感受" __fn_onChange="{{true}}" data-e-onchange-so="this"></at-textarea>
+            <at-image-picker length="{{3}}" __triggerObserer="{{ _triggerObserer }}" multiple="{{true}}" files="{{files}}" bindonchange="onChange" bindonfail="onFail" bindonimageclick="onImageClick" __fn_onChange="{{true}}" data-e-onchange-so="this" __fn_onFail="{{true}}" data-e-onfail-so="this" __fn_onImageClick="{{true}}" data-e-onimageclick-so="this"></at-image-picker>
+            <view class="addr at-icon at-icon-map-pin">{{' ' + province + ' ' + city + ' ' + area}}</view>
             <at-button type="primary" __triggerObserer="{{ _triggerObserer }}" formType="submit">发布</at-button>
         </at-form>
     </view>

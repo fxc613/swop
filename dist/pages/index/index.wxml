@@ -1,3 +1,23 @@
 <block>
-    <view></view>
+    <view>
+        <ul __triggerObserer="{{ _triggerObserer }}">
+            <li __triggerObserer="{{ _triggerObserer }}">
+                <at-avatar image="https://jdc.jd.com/img/200" __triggerObserer="{{ _triggerObserer }}"></at-avatar>
+                <view class="right">
+                    <view class="name">梨子呦</view><text __triggerObserer="{{ _triggerObserer }}">3哈3哈3哈3哈3哈3哈3哈3哈3哈3哈3哈3哈3哈3哈3哈3哈3哈3。</text>
+                    <view class="items" style="display:flex;flex-wrap:wrap;">
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                        <image mode="widthFix" __triggerObserer="{{ _triggerObserer }}" src="https://jdc.jd.com/img/200"></image>
+                    </view>
+                </view>
+            </li>
+        </ul>
+    </view>
 </block>

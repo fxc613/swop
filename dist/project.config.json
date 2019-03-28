@@ -1,15 +1,15 @@
 {
-	"projectname": "swop",
-	"description": "以物换物",
-	"appid": "wx10c5f26541efca79",
-	"setting": {
-		"urlCheck": false,
-		"es6": false,
-		"postcss": false,
-		"minified": false,
-		"newFeature": true,
-		"autoAudits": false
-	},
-	"compileType": "miniprogram",
-	"condition": {}
+  "miniprogramRoot": "./",
+  "projectname": "swop-dev",
+  "description": "以物换物",
+  "appid": "wx10c5f26541efca79",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false,
+    "newFeature": true
+  },
+  "compileType": "miniprogram",
+  "condition": {}
 }

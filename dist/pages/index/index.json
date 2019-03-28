@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "at-avatar": "../../npm/taro-ui/dist/weapp/components/avatar/index"
+  },
   "navigationBarTitleText": "首页"
 }

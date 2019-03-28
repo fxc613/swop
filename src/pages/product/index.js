@@ -9,17 +9,18 @@ import {
   AtInput,
   AtTextarea,
   AtImagePicker,
-  AtForm
+  AtForm,
+  AtIcon
 } from 'taro-ui'
 
 import './index.less'
 
-@inject('locationStore')
+@inject('counterStore', 'locationStore')
 @observer
 class Index extends Component {
 
   config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: '发布'
   }
 
   constructor() {
@@ -51,11 +52,12 @@ class Index extends Component {
     const {province, city, area, longitude, latitude} = this.props.locationStore;
 
     const actFiles = await multiUpload(files.map(file => file.url))
+    console.log(actFiles)
     fetch('product/saveOrUpdate', {
         title,
         desc,
         images: actFiles,
-        location: `${latitude},${longitude}`,
+        location: `${longitude},${latitude}`,
         province,
         city,
         area
@@ -68,24 +70,26 @@ class Index extends Component {
     const {province, city, area} = this.props.locationStore;
     return (
       <View>
-        <AtForm onSubmit={this.onPublish}>
-          <AtInput type="text" name="title" onChange={this.onChangeTitle} value={this.state.title} placeholder="标题 想换点啥"   />
+        <AtForm className='App' onSubmit={this.onPublish}>
+
+          <AtInput type="text" name="title" onChange={this.onChangeTitle} value={this.state.title} placeholder="标题 品类品牌型号都是对方喜欢搜索的"   />
+
           <AtTextarea
             value={this.state.value}
             onChange={this.handleChange.bind(this)}
             maxLength={200}
-            placeholder='您想换点啥'
+            placeholder='描述宝贝的转手原因、入手渠道和使用感受'
           />
-          <AtImagePicker
+        
+         <AtImagePicker
             length={3}
-            showAddBtn={this.state.files.length < 9}
             multiple
             files={this.state.files}
             onChange={this.onChange.bind(this)}
             onFail={this.onFail.bind(this)}
             onImageClick={this.onImageClick.bind(this)}
           />
-          <View>{`位置：${province}-${city}-${area}`}</View>
+          <View className='addr at-icon at-icon-map-pin'>{` ${province} ${city} ${area}`}</View>
           <AtButton type='primary' formType="submit">发布</AtButton>
         </AtForm>
       </View>

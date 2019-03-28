@@ -6,5 +6,5 @@
     "at-image-picker": "../../npm/taro-ui/dist/weapp/components/image-picker/index",
     "at-button": "../../npm/taro-ui/dist/weapp/components/button/index"
   },
-  "navigationBarTitleText": "首页"
+  "navigationBarTitleText": "发布"
 }
